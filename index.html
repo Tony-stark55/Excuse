@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>ExcuseMe — Perfect excuses. Zero effort.</title>
+  <meta name="description" content="AI excuse generator for students and professionals. English & Hinglish. Free."/>
+  <meta property="og:title" content="ExcuseMe — AI Excuse Generator"/>
+  <meta property="og:description" content="Generate the perfect excuse in seconds. English or Hinglish."/>
+  <!-- Google Analytics — swap G-XXXXXXXXXX with your real ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());gtag('config','G-XXXXXXXXXX');
+  </script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- EMOJI RAIN — starts floating immediately -->
+<div class="emoji-bg" aria-hidden="true">
+  <span style="--d:0s;   --l:4%;  --s:28px; --dur:18s">😅</span>
+  <span style="--d:1.2s; --l:11%; --s:36px; --dur:15s">🙈</span>
+  <span style="--d:2.8s; --l:19%; --s:22px; --dur:22s">😬</span>
+  <span style="--d:0.4s; --l:27%; --s:30px; --dur:17s">🤥</span>
+  <span style="--d:3.6s; --l:35%; --s:24px; --dur:24s">🫠</span>
+  <span style="--d:1.6s; --l:43%; --s:38px; --dur:14s">😭</span>
+  <span style="--d:5.2s; --l:51%; --s:26px; --dur:20s">💀</span>
+  <span style="--d:0.9s; --l:59%; --s:32px; --dur:16s">🙏</span>
+  <span style="--d:4.4s; --l:66%; --s:24px; --dur:21s">😩</span>
+  <span style="--d:3.0s; --l:73%; --s:38px; --dur:13s">🤡</span>
+  <span style="--d:0.7s; --l:80%; --s:26px; --dur:23s">😎</span>
+  <span style="--d:6.0s; --l:87%; --s:22px; --dur:19s">🤷</span>
+  <span style="--d:2.2s; --l:92%; --s:34px; --dur:15s">😴</span>
+  <span style="--d:4.0s; --l:7%;  --s:28px; --dur:25s">🫣</span>
+  <span style="--d:5.6s; --l:47%; --s:40px; --dur:12s">🥲</span>
+  <span style="--d:1.4s; --l:69%; --s:26px; --dur:18s">😤</span>
+</div>
+
+<!-- GLOW BLOBS -->
+<div class="bg-blobs" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-row">
+      <img src="logo.png" alt="ExcuseMe" class="logo-img" onerror="this.style.display='none'"/>
+      <div class="logo-text">
+        <span class="logo-main">ExcuseMe</span>
+        <span class="logo-em"></span>
+      </div>
+    </div>
+    <div class="tagline">Perfect excuses. Zero effort.</div>
+  </header>
+
+  <!-- CARD -->
+  <main class="card">
+
+    <div class="card-top">
+      <h1 class="title">What did you<br/><em>not</em> do?</h1>
+      <p class="subtitle">Pick a situation, choose your vibe &amp; language — get your excuse.</p>
+    </div>
+
+    <!-- SITUATION -->
+    <div class="field">
+      <label class="label" for="situation">The situation</label>
+      <div class="select-wrap">
+        <select id="situation">
+          <optgroup label="🏫 College / School">
+            <option value="missed the 8 AM lecture and got marked absent">Missed 8 AM lecture</option>
+            <option value="didn't submit the assignment on time">Didn't submit assignment</option>
+            <option value="didn't complete the lab record">Didn't complete lab record</option>
+            <option value="missed an internal exam">Missed internal exam</option>
+            <option value="forgot it was presentation day today">Forgot presentation day</option>
+            <option value="didn't prepare for the viva at all">Didn't prepare for viva</option>
+            <option value="attendance is too low because of missed classes">Missed attendance</option>
+            <option value="forgot to bring the lab record to class">Didn't bring lab record</option>
+            <option value="forgot the admit card on exam day">Forgot admit card</option>
+            <option value="didn't do my part of the group project">Didn't do group project work</option>
+          </optgroup>
+          <optgroup label="💼 Work / Life">
+            <option value="missed a team meeting without any warning">Missed a team meeting</option>
+            <option value="submitted important work very late">Submitted work late</option>
+            <option value="didn't reply to messages for 3 days">Ghosted messages for 3 days</option>
+            <option value="skipped the gym again for the 5th time this week">Skipped gym (again)</option>
+            <option value="completely forgot a close friend's birthday">Forgot friend's birthday</option>
+            <option value="canceled plans at the very last minute">Canceled plans last minute</option>
+            <option value="showed up late to work">Late to work</option>
+            <option value="forgot to pay back money I borrowed">Forgot to pay someone back</option>
+            <option value="didn't clean the house when I promised I would">Didn't clean the house</option>
+          </optgroup>
+        </select>
+        <span class="select-arrow">↓</span>
+      </div>
+    </div>
+
+    <!-- LANGUAGE -->
+    <div class="field">
+      <label class="label">Language</label>
+      <div class="lang-row">
+        <button class="lang-btn active" data-lang="English" type="button">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-name">English</span>
+        </button>
+        <button class="lang-btn" data-lang="Hinglish" type="button">
+          <span class="lang-flag">🇮🇳</span>
+          <span class="lang-name">Hinglish</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- TONE -->
+    <div class="field">
+      <label class="label">Your vibe</label>
+      <div class="tone-grid">
+        <button class="tone-btn active" data-tone="Professional" type="button">
+          <span class="tone-emoji">💼</span>
+          <span class="tone-name">Professional</span>
+          <span class="tone-desc">polished &amp; convincing</span>
+        </button>
+        <button class="tone-btn" data-tone="Dramatic" type="button">
+          <span class="tone-emoji">🎭</span>
+          <span class="tone-name">Dramatic</span>
+          <span class="tone-desc">extra, intense &amp; bold</span>
+        </button>
+        <button class="tone-btn" data-tone="Funny" type="button">
+          <span class="tone-emoji">😄</span>
+          <span class="tone-name">Funny</span>
+          <span class="tone-desc">ridiculous but works 😄</span>
+        </button>
+      </div>
+    </div>
+
+    <button class="gen-btn" id="genBtn" type="button" onclick="generate()">
+      <span id="btnText">Generate my excuse ✨</span>
+    </button>
+
+    <!-- RESULT -->
+    <div class="result" id="result" style="display:none">
+      <div class="result-inner">
+        <div class="result-header">
+          <span class="result-badge" id="resultBadge">Your excuse</span>
+          <button class="icon-btn" type="button" onclick="generate()" title="Try again">↺</button>
+        </div>
+        <p class="result-text" id="resultText"></p>
+        <div class="result-actions">
+          <button class="action-btn" id="copyBtn" type="button" onclick="copyExcuse()"><span>Copy</span></button>
+          <button class="action-btn" type="button" onclick="shareWhatsApp()"><span>WhatsApp</span></button>
+          <button class="action-btn" type="button" onclick="shareTwitter()"><span>Twitter / X</span></button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Made with zero responsibility &nbsp;·&nbsp; ExcuseMe 🫠</p>
+    <p style="margin-top:10px;">
+      <a href="about.html" style="color:#c084fc;font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(192,132,252,0.45);border-radius:20px;padding:4px 16px;transition:all 0.2s;display:inline-block;" onmouseover="this.style.background='rgba(192,132,252,0.15)';this.style.borderColor='#c084fc'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(192,132,252,0.45)'">About Us</a>
+    </p>
+  </footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

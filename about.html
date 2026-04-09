@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>About Us — ExcuseMe</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem 3rem;
+    }
+    .about-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      max-width: 560px;
+      width: 100%;
+      backdrop-filter: blur(12px);
+    }
+    .about-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.6rem;
+    }
+    .about-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .about-logo-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #c084fc, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .about-tagline {
+      font-size: 0.78rem;
+      color: rgba(244,240,255,0.4);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .about-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 1.4rem 0;
+    }
+    .about-section-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(196,168,255,0.6);
+      margin-bottom: 0.7rem;
+    }
+    .about-body {
+      font-size: 0.95rem;
+      color: rgba(244,240,255,0.72);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .about-body em {
+      color: #c084fc;
+      font-style: normal;
+      font-weight: 500;
+    }
+    .dev-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 1rem 1.2rem;
+      margin-top: 1.2rem;
+    }
+    .dev-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .dev-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: rgba(244,240,255,0.92);
+    }
+    .dev-role {
+      font-size: 0.78rem;
+      color: rgba(244,240,255,0.4);
+      margin-top: 2px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: rgba(196,168,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #c084fc;
+    }
+    .about-footer {
+      margin-top: 1.8rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(244,240,255,0.25);
+    }
+  </style>
+</head>
+<body>
+
+<!-- EMOJI RAIN -->
+<div class="emoji-bg" aria-hidden="true">
+  <span style="--d:0s;   --l:4%;  --s:28px; --dur:18s">😅</span>
+  <span style="--d:1.2s; --l:11%; --s:36px; --dur:15s">🙈</span>
+  <span style="--d:2.8s; --l:19%; --s:22px; --dur:22s">😬</span>
+  <span style="--d:0.4s; --l:27%; --s:30px; --dur:17s">🤥</span>
+  <span style="--d:3.6s; --l:35%; --s:24px; --dur:24s">🫠</span>
+  <span style="--d:5.2s; --l:51%; --s:26px; --dur:20s">💀</span>
+  <span style="--d:0.9s; --l:59%; --s:32px; --dur:16s">🙏</span>
+  <span style="--d:4.4s; --l:66%; --s:24px; --dur:21s">😩</span>
+  <span style="--d:0.7s; --l:80%; --s:26px; --dur:23s">😎</span>
+  <span style="--d:6.0s; --l:87%; --s:22px; --dur:19s">🤷</span>
+</div>
+
+<!-- GLOW BLOBS -->
+<div class="bg-blobs" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<div class="page about-page">
+
+  <div class="about-card">
+
+    <div class="about-logo-row">
+      <img src="logo.png" alt="ExcuseMe" class="about-logo-img" onerror="this.style.display='none'"/>
+      <div>
+        <div class="about-logo-name">ExcuseMe</div>
+        <div class="about-tagline">Perfect excuses. Zero effort.</div>
+      </div>
+    </div>
+
+    <div class="about-divider"></div>
+
+    <div class="about-section-title">What is this?</div>
+    <p class="about-body">
+      <em>ExcuseMe</em> is an AI-powered excuse generator built for students, professionals,
+      and anyone who has ever needed a quick, convincing reason for... well, anything.
+      Whether you missed a lecture, forgot a deadline, or just needed a day off —
+      we've got you covered in <em>English</em> and <em>Hinglish</em>.
+    </p>
+
+    <div class="about-divider"></div>
+
+    <div class="about-section-title">Why we built it</div>
+    <p class="about-body">
+      Let's be honest — life gets messy. Sometimes you need a well-worded excuse fast,
+      and your brain just isn't cooperating. ExcuseMe takes the stress out of that moment.
+      Pick your situation, pick your vibe, and let the AI do the awkward part.
+      No judgment. We've all been there.
+    </p>
+
+    <div class="about-divider"></div>
+
+    <div class="about-section-title">The developer</div>
+    <div class="dev-card">
+      <div class="dev-avatar">👨‍💻</div>
+      <div>
+        <div class="dev-name">Chinmay Khandal</div>
+        <div class="dev-role">Builder · Designer · Professional Excuse Tester</div>
+      </div>
+    </div>
+
+
+    <div class="about-divider"></div>
+
+    <a href="index.html" class="back-link">← Back to ExcuseMe</a>
+
+  </div>
+
+  <div class="about-footer">Made with zero responsibility &nbsp;·&nbsp; ExcuseMe 🫠</div>
+
+</div>
+
+</body>
+</html>
